@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: var(--font-sans);
+    background-color: #050506;
+    color: #f4f4f5;
+  }
+}
+
+/* Sharp rectangular range slider */
+input[type="range"].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].studio-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 0;
+  background: #18191f;
+  border: 1px solid #272932;
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  background: #f4f4f5;
+  border: 1px solid #050506;
+  box-shadow: 0 0 0 1px #52525b;
+  margin-top: -6px;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+input[type="range"].studio-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}

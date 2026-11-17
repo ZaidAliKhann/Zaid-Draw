@@ -1,0 +1,6 @@
+{
+  "name": "Air Writer AI",
+  "description": "Real-time webcam hand-tracking canvas for drawing and writing in the air with glowing light strokes.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
